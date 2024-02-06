@@ -6,7 +6,48 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <h1 id="title">Survey Form</h1>
-    <p>Please answer this short survey to improve our platform</p>
+    <h1 id="title">Spy Agency Survey Form</h1>
+    <p>Please answer this short survey to improve our spy platform</p>
+    <form method="post" id="survey-form">
+      <fieldset>
+        <label id="name-label">Enter your name:   <input id="name" name="name" type="text" placeholder="Sterling Archer" required /></label>
+        <label id="email-label">Enter your email:  <input id="email" name="email" type="email" placeholder="wolrdsgreatest@spy.com" required /></label>
+      </fieldset>
+      <fieldset>
+        <label id="number-label">Enter your age: <input id="number" name="number" type="number" min="13" max="120" placeholder="35" required /></label>
+        <label>What is your role/occupation?
+          <select id="dropdown" name="dropdown">
+              <option value="1">Field Agent</option>
+              <option value="2">Accountant</option>
+              <option value="3">Receptionist</option>
+              <option value="4">Scientist(any)</option>
+              <option value="5">HR</option>
+              <option value="6">Driver/Pilot</option>
+              <option value="7">Boss</option>
+              <option value="8">Mission Control</option>
+          </select>
+        </label>
+      </fieldset>
+      <fieldset>
+        <label for="male">Choose your Gender: <input id="male" type="radio" name="gender"  checked /> Male</label>
+        <label for="female"><input id="female" type="radio" name="gender" /> Female</label>
+        <label for="cyborg"><input id="cyborg" type="radio" name="gender" /> Cyborg</label>
+        <label for="other"><input id="other" type="radio" name="gender" /> Other</label>
+        <label>What do you usually do during missions?
+          <input class="inline" id="checkbox" value="1" type="checkbox" name="checkbox"/>Eat
+          <input class="inline" id="checkbox" value="2" type="checkbox" name="checkbox"/>Drink
+          <input class="inline" id="checkbox" value="3" type="checkbox" name="checkbox"/>Drugs
+          <input class="inline" id="checkbox" value="4" type="checkbox" name="checkbox"/>Smoke
+          <input class="inline" id="checkbox" value="5" type="checkbox" name="checkbox"/>Copulation
+          <input class="inline" id="checkbox" value="6" type="checkbox" name="checkbox"/>Drink a lot
+          <input class="inline" id="checkbox" value="7" type="checkbox" name="checkbox"/>Arson
+          <input class="inline" id="checkbox" value="8" type="checkbox" name="checkbox"/>Revise dossier
+        </label>
+        <label>What is your biggest achievement in the job?
+          <textarea id="bio" name="bio" rows="3" cols="30" placeholder="I saved the world from ..."></textarea>  
+        </label>
+      </fieldset>
+      <input type="submit" value="Submit" />
+    </form>
   </body>
 </html>
