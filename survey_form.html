@@ -3,19 +3,25 @@
   <head>
     <meta charset="UTF-8">
     <title>Registration Form</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="sf.css" />
   </head>
   <body>
     <h1 id="title">Spy Agency Survey Form</h1>
-    <p>Please answer this short survey to improve our spy platform</p>
+    <p id="description">Please answer this short survey to improve our spy platform</p>
     <form method="post" id="survey-form">
       <fieldset>
         <label id="name-label">Enter your name:   <input id="name" name="name" type="text" placeholder="Sterling Archer" required /></label>
         <label id="email-label">Enter your email:  <input id="email" name="email" type="email" placeholder="wolrdsgreatest@spy.com" required /></label>
       </fieldset>
       <fieldset>
-        <label id="number-label">Enter your age: <input id="number" name="number" type="number" min="13" max="120" placeholder="35" required /></label>
-        <label>What is your role/occupation?
+        <label id="number-label">Enter your age: <input id="number" name="number" type="number" min="13" max="120" placeholder="35" required /></label><label for="male">Choose your Gender: <input id="male" type="radio" name="gender" value="1" class="inline" checked /> Male</label>
+        <label for="female"><input id="female" type="radio" name="gender" value="2" class="inline" /> Female</label>
+        <label for="cyborg"><input id="cyborg" type="radio" name="gender" value="3" class="inline" /> Cyborg</label>
+        <label for="other"><input id="other" type="radio" name="gender" value="4" class="inline" /> Other</label>
+        
+      </fieldset>
+      <fieldset>
+        <label>Role/occupation?
           <select id="dropdown" name="dropdown">
               <option value="1">Field Agent</option>
               <option value="2">Accountant</option>
@@ -27,27 +33,18 @@
               <option value="8">Mission Control</option>
           </select>
         </label>
-      </fieldset>
-      <fieldset>
-        <label for="male">Choose your Gender: <input id="male" type="radio" name="gender"  checked /> Male</label>
-        <label for="female"><input id="female" type="radio" name="gender" /> Female</label>
-        <label for="cyborg"><input id="cyborg" type="radio" name="gender" /> Cyborg</label>
-        <label for="other"><input id="other" type="radio" name="gender" /> Other</label>
-        <label>What do you usually do during missions?
-          <input class="inline" id="checkbox" value="1" type="checkbox" name="checkbox"/>Eat
-          <input class="inline" id="checkbox" value="2" type="checkbox" name="checkbox"/>Drink
-          <input class="inline" id="checkbox" value="3" type="checkbox" name="checkbox"/>Drugs
-          <input class="inline" id="checkbox" value="4" type="checkbox" name="checkbox"/>Smoke
-          <input class="inline" id="checkbox" value="5" type="checkbox" name="checkbox"/>Copulation
-          <input class="inline" id="checkbox" value="6" type="checkbox" name="checkbox"/>Drink a lot
-          <input class="inline" id="checkbox" value="7" type="checkbox" name="checkbox"/>Arson
-          <input class="inline" id="checkbox" value="8" type="checkbox" name="checkbox"/>Revise dossier
+        <label for="checkbox" >Organisation(s) you've worked for: 
+          <input class="inline" id="checkbox" value="1" type="checkbox" name="checkbox"/>The Agency
+          <input class="inline" id="checkbox" value="2" type="checkbox" name="checkbox"/>ISIS
+          <input class="inline" id="checkbox" value="3" type="checkbox" name="checkbox"/>IIA
+          <input class="inline" id="checkbox" value="4" type="checkbox" name="checkbox"/>Odin
+          <input class="inline" id="checkbox" value="5" type="checkbox" name="checkbox"/>Other
         </label>
         <label>What is your biggest achievement in the job?
           <textarea id="bio" name="bio" rows="3" cols="30" placeholder="I saved the world from ..."></textarea>  
         </label>
       </fieldset>
-      <input type="submit" value="Submit" />
+      <input id="submit" type="submit" value="Submit" />
     </form>
   </body>
 </html>
